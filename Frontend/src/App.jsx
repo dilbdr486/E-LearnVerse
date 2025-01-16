@@ -7,12 +7,13 @@ import WebThemes from "./pages/webThemes/webThemes";
 import Video from "./pages/video/video";
 import Dimension from "./pages/3D/3D";
 import Layout from "./layout";
-import Learns from "./pages/learn/learns";
+import CSS from "./pages/code/cssComponent";
 import License from "./components/license/license";
 import Download from "./components/download/download";
 import Login from "./components/login/login";
 import Logo from "./components/logo/logo";
-import Pricing from "./components/pricing/pricing";
+import Java from "./pages/code/javaComponent";
+import JS from './pages/code/javaScript'
 
 function App() {
   return (
@@ -27,11 +28,12 @@ function App() {
           <Route path="web" element={<WebThemes />} />
           <Route path="video" element={<Video />} />
           <Route path="dimension" element={<Dimension />} />
-          <Route path="learns" element={<Learns />} />
+          <Route path="/css" element={<CSS />} />
           <Route path="license" element={<License />} />
-          <Route path="pricing" element={<Pricing />} />
+          <Route path="/java" element={<Java />} />
           <Route path="download" element={<Download />} />
           <Route path="sign-in" element={<Login />} />
+          <Route path="/js" element={<JS />} />
         </Route>
       </Routes>
     </>
