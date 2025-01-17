@@ -5,7 +5,7 @@ import { FaApple, FaApplePay, FaAppStore, FaDownload, FaGooglePlay, FaLifeRing, 
 function Logo() {
   return (
     <div className="sticky top-0 border-b border-neutral-200/20 px-6 py-6">
-      <div className="container mx-auto max-w-screen-xl py-10 flex flex-col lg:flex-row items-center justify-between gap-8">
+      <div className="container mx-auto max-w-screen-xl flex flex-col lg:flex-row items-center justify-between gap-8">
         {/* <!-- Left Content --> */}
         <div className="container m-auto w-full">
           <div className="grid grid-cols-1 md:grid-cols-[3fr_1fr] gap-8">

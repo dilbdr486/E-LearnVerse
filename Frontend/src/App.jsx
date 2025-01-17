@@ -19,6 +19,7 @@ import Tailwindcss from "./pages/code/tailwindCSSComponent";
 import Form from "./pages/code/formComponent";
 import Auth from "./pages/code/authentication";
 import API from "./pages/code/apiComponent";
+import Wordpress from "./pages/webThemes/wordPress";
 
 function App() {
   return (
@@ -44,6 +45,7 @@ function App() {
           <Route path="/form" element={<Form />} />
           <Route path="/auth" element={<Auth />} />
           <Route path="/api" element={<API />} />
+          <Route path="/wordpress" element={<Wordpress />} />
         </Route>
       </Routes>
     </>

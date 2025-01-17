@@ -43,7 +43,8 @@ function Code() {
   return (
     <div>
       <section id="ComponentLayout" class="min-h-screen">
-        <div class="container mx-auto px-4 py-8" id="el-f7fqpvm1">
+        <div class="container mx-auto px-4 py-6" id="el-f7fqpvm1">
+        <h1 className="font-bold text-3xl text-center mb-8">Programming Codes</h1>
           {/* <!-- Category Grid --> */}
           <div
             class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
