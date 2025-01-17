@@ -8,12 +8,17 @@ import Video from "./pages/video/video";
 import Dimension from "./pages/3D/3D";
 import Layout from "./layout";
 import CSS from "./pages/code/cssComponent";
-import License from "./components/license/license";
+import C from "./pages/code/cProgramming";
 import Download from "./components/download/download";
 import Login from "./components/login/login";
 import Logo from "./components/logo/logo";
 import Java from "./pages/code/javaComponent";
-import JS from './pages/code/javaScript'
+import JS from "./pages/code/javaScript";
+import Cplus from "./pages/code/cPlusPlus";
+import Tailwindcss from "./pages/code/tailwindCSSComponent";
+import Form from "./pages/code/formComponent";
+import Auth from "./pages/code/authentication";
+import API from "./pages/code/apiComponent";
 
 function App() {
   return (
@@ -21,7 +26,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path="" element={<Logo />} />
-          <Route path="code" element={<Code/>} />
+          <Route path="code" element={<Code />} />
           <Route path="graphics" element={<Graphic />} />
           <Route path="music" element={<Music />} />
           <Route path="photos" element={<Photos />} />
@@ -29,11 +34,16 @@ function App() {
           <Route path="video" element={<Video />} />
           <Route path="dimension" element={<Dimension />} />
           <Route path="/css" element={<CSS />} />
-          <Route path="license" element={<License />} />
+          <Route path="/c" element={<C />} />
           <Route path="/java" element={<Java />} />
           <Route path="download" element={<Download />} />
           <Route path="sign-in" element={<Login />} />
           <Route path="/js" element={<JS />} />
+          <Route path="/cplusplus" element={<Cplus />} />
+          <Route path="/tailwindcss" element={<Tailwindcss />} />
+          <Route path="/form" element={<Form />} />
+          <Route path="/auth" element={<Auth />} />
+          <Route path="/api" element={<API />} />
         </Route>
       </Routes>
     </>

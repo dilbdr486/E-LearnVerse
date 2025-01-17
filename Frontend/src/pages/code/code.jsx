@@ -16,10 +16,34 @@ function Code() {
     navigate("/CSS");
   }
 
+  function handleTailewindCSS() {
+    navigate("/tailwindcss");
+  }
+
+  function handleCProgramming() {
+    navigate("/c");
+  }
+
+  function handleCPluPlus() {
+    navigate("/cplusplus");
+  }
+
+  function handleForm() {
+    navigate("/form");
+  }
+
+  function handleAuth() {
+    navigate("/auth");
+  }
+
+  function handleAPI() {
+    navigate("/api");
+  }
+
   return (
     <div>
-      <section id="ComponentLayout" class="min-h-screen bg-gray-50">
-        <div class="container mx-auto px-4 py-12" id="el-f7fqpvm1">
+      <section id="ComponentLayout" class="min-h-screen">
+        <div class="container mx-auto px-4 py-8" id="el-f7fqpvm1">
           {/* <!-- Category Grid --> */}
           <div
             class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
@@ -126,7 +150,7 @@ function Code() {
             <div
               class="bg-white rounded-lg border border-gray-200 p-6 hover:border-blue-500 transition-all"
               id="el-s79ohe27"
-              onClick={()=>handleCSS()}
+              onClick={() => handleCSS()}
             >
               <div
                 class="flex items-center justify-between mb-4"
@@ -174,6 +198,7 @@ function Code() {
             <div
               class="bg-white rounded-lg border border-gray-200 p-6 hover:border-blue-500 transition-all"
               id="el-b5hnzcuu"
+              onClick={() => handleTailewindCSS()}
             >
               <div
                 class="flex items-center justify-between mb-4"
@@ -221,6 +246,7 @@ function Code() {
             <div
               class="bg-white rounded-lg border border-gray-200 p-6 hover:border-blue-500 transition-all"
               id="el-pb2r72pz"
+              onClick={() => handleCProgramming()}
             >
               <div
                 class="flex items-center justify-between mb-4"
@@ -268,6 +294,7 @@ function Code() {
             <div
               class="bg-white rounded-lg border border-gray-200 p-6 hover:border-blue-500 transition-all"
               id="el-lyucv9sn"
+              onClick={() => handleCPluPlus()}
             >
               <div
                 class="flex items-center justify-between mb-4"
@@ -323,7 +350,7 @@ function Code() {
             >
               {/* <!-- Forms Example Card --> */}
               <div
-                class="bg-white rounded-lg border border-gray-200 p-6 hover:border-blue-500 transition-all"
+                class="bg-white rounded-lg border border-gray-200 p-6 transition-all"
                 id="el-iebhbb1y"
               >
                 <h3
@@ -338,6 +365,7 @@ function Code() {
                 </p>
                 <div class="flex justify-end" id="el-h1ibu0k3">
                   <button
+                    onClick={() => handleForm()}
                     class="text-blue-600 hover:text-blue-800 font-medium"
                     id="el-w49i89en"
                   >
@@ -348,7 +376,7 @@ function Code() {
 
               {/* <!-- Authentication Example Card --> */}
               <div
-                class="bg-white rounded-lg border border-gray-200 p-6 hover:border-blue-500 transition-all"
+                class="bg-white rounded-lg border border-gray-200 p-6  transition-all"
                 id="el-jhan4eiq"
               >
                 <h3
@@ -362,6 +390,7 @@ function Code() {
                 </p>
                 <div class="flex justify-end" id="el-dkgcipw4">
                   <button
+                    onClick={() => handleAuth()}
                     class="text-blue-600 hover:text-blue-800 font-medium"
                     id="el-8a0y5amf"
                   >
@@ -372,7 +401,7 @@ function Code() {
 
               {/* <!-- API Integration Example Card --> */}
               <div
-                class="bg-white rounded-lg border border-gray-200 p-6 hover:border-blue-500 transition-all"
+                class="bg-white rounded-lg border border-gray-200 p-6  transition-all"
                 id="el-dzkzy3ki"
               >
                 <h3
@@ -386,11 +415,61 @@ function Code() {
                 </p>
                 <div class="flex justify-end" id="el-uj6de5jm">
                   <button
+                    onClick={() => handleAPI()}
                     class="text-blue-600 hover:text-blue-800 font-medium"
                     id="el-x52zl22o"
                   >
                     View Examples →
                   </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h1 className="text-xl font-bold mt-8 mb-4">Premium</h1>
+            <div
+              class="bg-white rounded-lg border border-gray-200 p-6 transition-all"
+              id="el-z2n8mi5h"
+            >
+              <div
+                class="flex items-center justify-between mb-4"
+                id="el-cf914gnf"
+              >
+                <div className="flex gap-8">
+                  <img
+                    src="https://market-resized.envatousercontent.com/previews/files/259186609/smart-display.png?w=590&h=300&cf_fit=crop&crop=top&format=auto&q=85&s=c910fe2ae2c572e05d629cfae88478448ca2e4f6c76cf39e596cd276505df842"
+                    alt=""
+                    width={400}
+                  />
+                  <div>
+                    <h1 className="font-bold text-xl mb-2">Smart Form</h1>
+                    <p className="text-lg mb-2">Software Version:jQuery</p>
+                    <p className="text-lg mb-2">File Types Included:</p>
+                    <div className="flex gap-4">
+                      <p className="bg-gray-200 rounded-lg px-2">
+                        JavaScript JS
+                      </p>
+                      <p className="bg-gray-200 rounded-lg px-2">PHP</p>
+                      <p className="bg-gray-200 rounded-lg px-2">CSS</p>
+                      <p className="bg-gray-200 rounded-lg px-2">HTML</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="text-center flex gap-4">
+                  <div class="flex items-center h-40">
+                    <div class="border-l border-gray-400 h-full"></div>
+                  </div>
+
+                  <div className="">
+                    <h1 class="font-bold px-3 mb-2" id="el-swjaeg7g">
+                      $13
+                    </h1>
+                    <p className="mb-2">4.2k sales</p>
+                    <p>Last updated:2025 jan 20</p>
+                    <button className="px-8 py-2 border border-black mt-4 text-blue-500 hover:border-blue-500">
+                      Live Preview
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>

@@ -1,205 +1,305 @@
 import React, { useEffect } from "react";
 
-function JavaComponent() {
+function cPlusPlus() {
   useEffect(() => {
     Prism.highlightAll(); // Apply syntax highlighting after rendering
   }, []);
-
   return (
     <div>
-      <section id="JavaComponents" className="min-h-screen bg-gray-50 py-12">
-        <div className="container mx-auto px-4">
-          {/* Header */}
-          <div className="mb-12">
-            <h1 className="text-3xl font-bold text-gray-900 mb-4">
-              Java Components
+      <section id="CPlusPlusComponents" class="min-h-screen bg-gray-50 py-12">
+        <div class="container mx-auto px-4" id="el-7fr9i2rx">
+          {/* <!-- Header --> */}
+          <div class="mb-12" id="el-nbw08k2j">
+            <h1 class="text-3xl font-bold text-gray-900 mb-4" id="el-kpphf9qh">
+              C++ Components
             </h1>
-            <p className="text-gray-600">
-              Enterprise-ready Java components and implementations
+            <p class="text-gray-600" id="el-680f9jmi">
+              Object-oriented C++ implementations and design patterns
             </p>
           </div>
 
-          {/* Components Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {/* REST Controller Component Card */}
-            <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
-              <div className="border-b border-gray-200 p-4">
-                <h3 className="text-lg font-semibold text-gray-800">
-                  REST Controller
+          {/* <!-- Components Grid --> */}
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8" id="el-lqqcdcnz">
+            {/* <!-- Template Class Example --> */}
+            <div
+              class="bg-white rounded-lg border border-gray-200 overflow-hidden"
+              id="el-ei42pbow"
+            >
+              <div class="border-b border-gray-200 p-4" id="el-od9ph1qs">
+                <h3
+                  class="text-lg font-semibold text-gray-800"
+                  id="el-4r61s9qb"
+                >
+                  Generic Container
                 </h3>
               </div>
-              <div className="p-4">
-                <div className="bg-gray-100 p-4 rounded-lg mb-4">
-                  <pre className="text-sm text-gray-800 overflow-x-auto">
-                    <code>
-                      {`@RestController
-@RequestMapping("/api/users")
-public class UserController {
-    @GetMapping("/{id}")
-    public ResponseEntity<User> getUser(@PathVariable Long id) {
-        return userService.findById(id)
-            .map(ResponseEntity::ok)
-            .orElse(ResponseEntity.notFound().build());
+              <div class="p-4" id="el-gwobpjui">
+                <div class="bg-gray-100 p-4 rounded-lg mb-4" id="el-joqkqvz3">
+                  <pre
+                    class="text-sm text-gray-800 overflow-x-auto"
+                    id="el-scbdvck3"
+                  >
+                    <code id="el-guy4muyn">
+                      {`template &lt;typename T&gt;
+class Container {
+private:
+    std::vector&lt;T&gt; elements;
+public:
+    void add(const T&amp; element) {
+        elements.push_back(element);
     }
-}`}
-                    </code>
-                  </pre>
-                </div>
-                <p className="text-sm text-gray-600 mb-4">
-                  A RESTful controller implementation with Spring Boot
-                </p>
-              </div>
-            </div>
-
-            {/* JPA Entity Component Card */}
-            <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
-              <div className="border-b border-gray-200 p-4">
-                <h3 className="text-lg font-semibold text-gray-800">
-                  JPA Entity
-                </h3>
-              </div>
-              <div className="p-4">
-                <div className="bg-gray-100 p-4 rounded-lg mb-4">
-                  <pre className="text-sm text-gray-800 overflow-x-auto">
-                    <code>
-                      {`@Entity
-@Table(name = "users")
-public class User {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    @Column(nullable = false)
-    private String username;
-
-    @OneToMany(mappedBy = "user")
-    private List<Order> orders;
-}`}
-                    </code>
-                  </pre>
-                </div>
-                <p className="text-sm text-gray-600 mb-4">
-                  JPA Entity with relationships and validations
-                </p>
-              </div>
-            </div>
-
-            {/* Spring Service Component Card */}
-            <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
-              <div className="border-b border-gray-200 p-4">
-                <h3 className="text-lg font-semibold text-gray-800">
-                  Service Layer
-                </h3>
-              </div>
-              <div className="p-4">
-                <div className="bg-gray-100 p-4 rounded-lg mb-4">
-                  <pre className="text-sm text-gray-800 overflow-x-auto">
-                    <code>
-                      {`@Service
-@Transactional
-public class UserService {
-    @Autowired
-    private UserRepository userRepository;
-
-    public User createUser(UserDTO dto) {
-        User user = new User();
-        user.setUsername(dto.getUsername());
-        return userRepository.save(user);
+    
+    T&amp; get(size_t index) {
+        return elements.at(index);
     }
-}`}
-                    </code>
-                  </pre>
-                </div>
-                <p className="text-sm text-gray-600 mb-4">
-                  Service layer with transaction management
-                </p>
-              </div>
-            </div>
-
-            {/* Security Configuration Card */}
-            <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
-              <div className="border-b border-gray-200 p-4">
-                <h3 className="text-lg font-semibold text-gray-800">
-                  Security Config
-                </h3>
-              </div>
-              <div className="p-4">
-                <div className="bg-gray-100 p-4 rounded-lg mb-4">
-                  <pre className="text-sm text-gray-800 overflow-x-auto">
-                    <code>
-                      {`@Configuration
-@EnableWebSecurity
-public class SecurityConfig {
-    @Bean
-    public SecurityFilterChain filterChain(HttpSecurity http) {
-        return http
-            .authorizeRequests()
-            .antMatchers("/api/**").authenticated()
-            .and()
-            .build();
+    
+    size_t size() const {
+        return elements.size();
     }
-}`}
+};`}
                     </code>
                   </pre>
                 </div>
-                <p className="text-sm text-gray-600 mb-4">
-                  Spring Security configuration example
+                <p class="text-sm text-gray-600" id="el-de2htw9e">
+                  Template-based generic container implementation
                 </p>
               </div>
             </div>
 
-            {/* JPA Repository Card */}
-            <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
-              <div className="border-b border-gray-200 p-4">
-                <h3 className="text-lg font-semibold text-gray-800">
-                  JPA Repository
+            {/* <!-- Smart Pointer Implementation --> */}
+            <div
+              class="bg-white rounded-lg border border-gray-200 overflow-hidden"
+              id="el-9prtrbgn"
+            >
+              <div class="border-b border-gray-200 p-4" id="el-k12xjh6l">
+                <h3
+                  class="text-lg font-semibold text-gray-800"
+                  id="el-amvxksfh"
+                >
+                  Smart Pointer
                 </h3>
               </div>
-              <div className="p-4">
-                <div className="bg-gray-100 p-4 rounded-lg mb-4">
-                  <pre className="text-sm text-gray-800 overflow-x-auto">
-                    <code>
-                      {`@Repository
-public interface UserRepository extends JpaRepository<User, Long> {
-    Optional<User> findByUsername(String username);
-
-    @Query("SELECT u FROM User u WHERE u.status = ?1")
-    List<User> findByStatus(String status);
-}`}
+              <div class="p-4" id="el-oitxcdek">
+                <div class="bg-gray-100 p-4 rounded-lg mb-4" id="el-k1m1onz9">
+                  <pre
+                    class="text-sm text-gray-800 overflow-x-auto"
+                    id="el-vtuwhhqe"
+                  >
+                    <code id="el-5xiqd3yp">
+                      {`template &lt;typename T&gt;
+class UniquePtr {
+private:
+    T* ptr;
+public:
+    explicit UniquePtr(T* p = nullptr) : ptr(p) {}
+    ~UniquePtr() { delete ptr; }
+    
+    UniquePtr(const UniquePtr&amp;) = delete;
+    UniquePtr&amp; operator=(const UniquePtr&amp;) = delete;
+    
+    T* get() const { return ptr; }
+    T&amp; operator*() const { return *ptr; }
+    T* operator-&gt;() const { return ptr; }
+};`}
                     </code>
                   </pre>
                 </div>
-                <p className="text-sm text-gray-600 mb-4">
-                  Custom repository with JPA queries
+                <p class="text-sm text-gray-600" id="el-ywygd8a6">
+                  Custom unique pointer implementation with RAII
                 </p>
               </div>
             </div>
 
-            {/* Exception Handler Card */}
-            <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
-              <div className="border-b border-gray-200 p-4">
-                <h3 className="text-lg font-semibold text-gray-800">
-                  Exception Handler
+            {/* <!-- Observer Pattern --> */}
+            <div
+              class="bg-white rounded-lg border border-gray-200 overflow-hidden"
+              id="el-l18oxr2h"
+            >
+              <div class="border-b border-gray-200 p-4" id="el-65giyujr">
+                <h3
+                  class="text-lg font-semibold text-gray-800"
+                  id="el-sw7f6sxd"
+                >
+                  Observer Pattern
                 </h3>
               </div>
-              <div className="p-4">
-                <div className="bg-gray-100 p-4 rounded-lg mb-4">
-                  <pre className="text-sm text-gray-800 overflow-x-auto">
-                    <code>
-                      {`@ControllerAdvice
-public class GlobalExceptionHandler {
-    @ExceptionHandler(ResourceNotFoundException.class)
-    public ResponseEntity<ErrorResponse> handleNotFound(ResourceNotFoundException ex) {
-        return ResponseEntity
-            .status(HttpStatus.NOT_FOUND)
-            .body(new ErrorResponse(ex.getMessage()));
+              <div class="p-4" id="el-5j1c37wj">
+                <div class="bg-gray-100 p-4 rounded-lg mb-4" id="el-d72ck5wc">
+                  <pre
+                    class="text-sm text-gray-800 overflow-x-auto"
+                    id="el-olxcjsel"
+                  >
+                    <code id="el-4rbv02li">
+                      {`class Observer {
+public:
+    virtual void update(const std::string&amp; message) = 0;
+};
+
+class Subject {
+private:
+    std::vector&lt;Observer*&gt; observers;
+public:
+    void attach(Observer* observer) {
+        observers.push_back(observer);
     }
-}`}
+    
+    void notify(const std::string&amp; message) {
+        for(auto observer : observers) {
+            observer-&gt;update(message);
+        }
+    }
+};`}
                     </code>
                   </pre>
                 </div>
-                <p className="text-sm text-gray-600 mb-4">
-                  Global exception handling implementation
+                <p class="text-sm text-gray-600" id="el-cr4x3ljh">
+                  Implementation of the Observer design pattern
+                </p>
+              </div>
+            </div>
+
+            {/* <!-- Thread-Safe Queue --> */}
+            <div
+              class="bg-white rounded-lg border border-gray-200 overflow-hidden"
+              id="el-jvoeionj"
+            >
+              <div class="border-b border-gray-200 p-4" id="el-ee9532jl">
+                <h3
+                  class="text-lg font-semibold text-gray-800"
+                  id="el-t67hjpba"
+                >
+                  Thread-Safe Queue
+                </h3>
+              </div>
+              <div class="p-4" id="el-flx4xiv1">
+                <div class="bg-gray-100 p-4 rounded-lg mb-4" id="el-zqel8zrb">
+                  <pre
+                    class="text-sm text-gray-800 overflow-x-auto"
+                    id="el-aynluohf"
+                  >
+                    <code id="el-r8nqqwe8">
+                      {`template&lt;typename T&gt;
+class ThreadSafeQueue {
+private:
+    std::queue&lt;T&gt; queue;
+    mutable std::mutex mutex;
+public:
+    void push(T value) {
+        std::lock_guard&lt;std::mutex&gt; lock(mutex);
+        queue.push(std::move(value));
+    }
+    
+    bool try_pop(T&amp; value) {
+        std::lock_guard&lt;std::mutex&gt; lock(mutex);
+        if(queue.empty()) return false;
+        value = std::move(queue.front());
+        queue.pop();
+        return true;
+    }
+};`}
+                    </code>
+                  </pre>
+                </div>
+                <p class="text-sm text-gray-600" id="el-t6n8t7tr">
+                  Thread-safe queue implementation using mutex
+                </p>
+              </div>
+            </div>
+
+            {/* <!-- Factory Pattern --> */}
+            <div
+              class="bg-white rounded-lg border border-gray-200 overflow-hidden"
+              id="el-ok3t8xn9"
+            >
+              <div class="border-b border-gray-200 p-4" id="el-6v6tdyhh">
+                <h3
+                  class="text-lg font-semibold text-gray-800"
+                  id="el-9r031hj4"
+                >
+                  Factory Pattern
+                </h3>
+              </div>
+              <div class="p-4" id="el-0kj3p5s5">
+                <div class="bg-gray-100 p-4 rounded-lg mb-4" id="el-oa1pltf1">
+                  <pre
+                    class="text-sm text-gray-800 overflow-x-auto"
+                    id="el-i1ijuhm4"
+                  >
+                    <code id="el-pzlei124">
+                      {`class Product {
+public:
+    virtual void operation() = 0;
+};
+
+class ConcreteProductA : public Product {
+public:
+    void operation() override {
+        // Implementation
+    }
+};
+
+class Factory {
+public:
+    static std::unique_ptr&lt;Product&gt; createProduct(
+        const std::string&amp; type) {
+        if(type == "A") 
+            return std::make_unique&lt;ConcreteProductA&gt;();
+        return nullptr;
+    }
+};`}
+                    </code>
+                  </pre>
+                </div>
+                <p class="text-sm text-gray-600" id="el-d0b4thjs">
+                  Factory design pattern implementation
+                </p>
+              </div>
+            </div>
+
+            {/* <!-- RAII Resource Manager --> */}
+            <div
+              class="bg-white rounded-lg border border-gray-200 overflow-hidden"
+              id="el-7zuoc0rh"
+            >
+              <div class="border-b border-gray-200 p-4" id="el-3s3xgbwd">
+                <h3
+                  class="text-lg font-semibold text-gray-800"
+                  id="el-bhtozmpv"
+                >
+                  RAII Resource Manager
+                </h3>
+              </div>
+              <div class="p-4" id="el-34ngc6v8">
+                <div class="bg-gray-100 p-4 rounded-lg mb-4" id="el-gbs17ojb">
+                  <pre
+                    class="text-sm text-gray-800 overflow-x-auto"
+                    id="el-i6azle35"
+                  >
+                    <code id="el-m6hinhd7">
+                      {`class ResourceManager {
+private:
+    FILE* file;
+public:
+    ResourceManager(const char* filename) {
+        file = fopen(filename, "r");
+        if(!file) throw std::runtime_error("File open failed");
+    }
+    
+    ~ResourceManager() {
+        if(file) {
+            fclose(file);
+            file = nullptr;
+        }
+    }
+    
+    ResourceManager(const ResourceManager&amp;) = delete;
+    ResourceManager&amp; operator=(const ResourceManager&amp;) = delete;
+};`}
+                    </code>
+                  </pre>
+                </div>
+                <p class="text-sm text-gray-600" id="el-m7z81ww0">
+                  RAII-based resource management class
                 </p>
               </div>
             </div>
@@ -440,4 +540,4 @@ public class GlobalExceptionHandler {
   );
 }
 
-export default JavaComponent;
+export default cPlusPlus;
