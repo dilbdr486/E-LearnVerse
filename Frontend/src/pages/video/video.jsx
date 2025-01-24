@@ -1,6 +1,14 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function video() {
+
+  const navigate = useNavigate();
+
+  function handleEffectVideo(){
+    navigate("/effectvideo");
+  }
+
   return (
     <div>
       <section id="ComponentLayout" class="min-h-screen">
@@ -32,7 +40,7 @@ function video() {
               </p>
               <div class="flex gap-2 flex-wrap" id="el-rye6wwq0">
                 <img
-                  onClick={() => handleWordPress()}
+                  onClick={()=>handleEffectVideo()}
                   src="https://assets.market-storefront.envato-static.com/storefront/assets/home/videohive/category-tiles-after-effects-project-files-d5f0482d4ae0abc10a03817720adbba05add59037d89abceb79dd07c5ceb6e78.avif"
                   alt=""
                   className="transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 hover:cursor-pointer"
@@ -92,6 +100,7 @@ function video() {
                   src="https://assets.market-storefront.envato-static.com/storefront/assets/home/videohive/category-tiles-stock-footage-6d41f16c431795fe908d23dff5b9034490a8a3441997fad2869eb2de7fc7941f.avif"
                   alt=""
                   className="transition hover:cursor-pointer ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300"
+                  
                 />
               </div>
             </div>

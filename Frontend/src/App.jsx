@@ -5,7 +5,7 @@ import Music from "./pages/music/music";
 import Photos from "./pages/photos/photos";
 import WebThemes from "./pages/webThemes/webThemes";
 import Video from "./pages/video/video";
-import Dimension from "./pages/3D/3D";
+import Course from "./pages/course/course";
 import Layout from "./layout";
 import CSS from "./pages/code/cssComponent";
 import C from "./pages/code/cProgramming";
@@ -20,6 +20,9 @@ import Form from "./pages/code/formComponent";
 import Auth from "./pages/code/authentication";
 import API from "./pages/code/apiComponent";
 import Wordpress from "./pages/webThemes/wordPress";
+import Musics from "./pages/music/musics";
+import Effectvideo from "./pages/video/afterEffect";
+import GraphicPrint from "./pages/graphic/print";
 
 function App() {
   return (
@@ -33,7 +36,7 @@ function App() {
           <Route path="photos" element={<Photos />} />
           <Route path="web" element={<WebThemes />} />
           <Route path="video" element={<Video />} />
-          <Route path="dimension" element={<Dimension />} />
+          <Route path="course" element={<Course />} />
           <Route path="/css" element={<CSS />} />
           <Route path="/c" element={<C />} />
           <Route path="/java" element={<Java />} />
@@ -46,6 +49,9 @@ function App() {
           <Route path="/auth" element={<Auth />} />
           <Route path="/api" element={<API />} />
           <Route path="/wordpress" element={<Wordpress />} />
+          <Route path="/musics" element={<Musics />} />
+          <Route path="/effectvideo" element={<Effectvideo />} />
+          <Route path="/graphicPrint" element={<GraphicPrint />} />
         </Route>
       </Routes>
     </>

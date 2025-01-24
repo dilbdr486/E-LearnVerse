@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
+import Logo from "./logo.png";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -8,39 +9,104 @@ function Navbar() {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
-    <nav className="sticky top-0 bg-white border-b border-neutral-200/80 px-4 py-4 flex items-center justify-between z-50">
+    <nav className="sticky top-0 bg-white border-b border-neutral-200/80 py-4 flex items-center justify-between z-50">
       <div className="container mx-auto">
-        <div className="flex justify-center items-center h-16">
+        <div className="relative flex justify-center items-center h-16">
           {/* Logo and Main Nav */}
           <div className="flex justify-center items-center">
             <div className="flex-shrink-0 flex items-center">
               <span className="text-2xl font-bold">
-                <NavLink to="/">Logo</NavLink>
+                <NavLink to="/">
+                  <img src={Logo} width={70} className="" />
+                </NavLink>
               </span>
             </div>
-
-            <div className="hidden lg:ml-16 lg:mr-4 lg:flex lg:space-x-6 lg:justify-center lg:items-center">
+            <div className="hidden lg:ml-10 lg:mr-2 lg:flex lg:space-x-6 lg:justify-center lg:items-center">
               <ul className="flex space-x-6">
                 <li className="flex items-center text-gray-700 hover:text-gray-900 cursor-pointer">
-                  <NavLink to="/web">Website Templates</NavLink>
+                  <NavLink
+                    to="/web"
+                    className={({ isActive }) =>
+                      ` block 
+                     duration-200 ${
+                       isActive ? "text-blue-800 underline" : ""
+                     } hover:text-blue-500`
+                    }
+                  >
+                    Website Templates
+                  </NavLink>
                 </li>
                 <li className="flex items-center text-gray-700 hover:text-gray-900 cursor-pointer">
-                  <NavLink to="/code">Code</NavLink>
+                  <NavLink
+                    to="/code"
+                    className={({ isActive }) =>
+                      ` block duration-200 ${
+                        isActive ? "text-blue-800 underline" : ""
+                      } hover:text-blue-500`
+                    }
+                  >
+                    Code
+                  </NavLink>
                 </li>
                 <li className="flex items-center text-gray-700 hover:text-gray-900 cursor-pointer">
-                  <NavLink to="/video">Video</NavLink>
+                  <NavLink
+                    to="/video"
+                    className={({ isActive }) =>
+                      ` block duration-200 ${
+                        isActive ? "text-blue-800 underline" : ""
+                      } hover:text-blue-500`
+                    }
+                  >
+                    Video
+                  </NavLink>
                 </li>
                 <li className="flex items-center text-gray-700 hover:text-gray-900 cursor-pointer">
-                  <NavLink to="/music">Audio</NavLink>
+                  <NavLink
+                    to="/music"
+                    className={({ isActive }) =>
+                      ` block duration-200 ${
+                        isActive ? "text-blue-800 underline" : ""
+                      } hover:text-blue-500`
+                    }
+                  >
+                    Audio
+                  </NavLink>
                 </li>
                 <li className="flex items-center text-gray-700 hover:text-gray-900 cursor-pointer">
-                  <NavLink to="/graphics">Graphics</NavLink>
+                  <NavLink
+                    to="/graphics"
+                    className={({ isActive }) =>
+                      ` block duration-200 ${
+                        isActive ? "text-blue-800 underline" : ""
+                      } hover:text-blue-500`
+                    }
+                  >
+                    Graphics
+                  </NavLink>
                 </li>
                 <li className="flex items-center text-gray-700 hover:text-gray-900 cursor-pointer">
-                  <NavLink to="/photos">Photos</NavLink>
+                  <NavLink
+                    to="/photos"
+                    className={({ isActive }) =>
+                      ` block duration-200 ${
+                        isActive ? "text-blue-800 underline" : ""
+                      } hover:text-blue-500`
+                    }
+                  >
+                    Photos
+                  </NavLink>
                 </li>
-                <li className="flex items-center px-3 text-gray-700 hover:text-gray-900 cursor-pointer">
-                  <NavLink to="/dimension">3D</NavLink>
+                <li className="flex items-center text-gray-700 hover:text-gray-900 cursor-pointer">
+                  <NavLink
+                    to="/course"
+                    className={({ isActive }) =>
+                      ` block duration-200 ${
+                        isActive ? "text-blue-800 underline" : ""
+                      } hover:text-blue-500`
+                    }
+                  >
+                    Course
+                  </NavLink>
                 </li>
               </ul>
             </div>
@@ -54,7 +120,7 @@ function Navbar() {
                 <input
                   type="text"
                   placeholder="Search"
-                  className="w-full sm:w-64 rounded-lg border border-gray-300 pl-10 pr-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full sm:w-64 lg:w-64 rounded-lg border border-gray-300 pl-10 pr-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                   <FaSearch className="text-gray-400" />
@@ -131,10 +197,10 @@ function Navbar() {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="lg:hidden">
-            <ul className="flex flex-col space-y-4">
+          <div className="lg:hidden fixed top-0 left-0 w-1/2 h-full bg-white z-50">
+            <ul className="flex flex-col space-y-4 p-4 h-full mt-32">
               <li className="text-gray-700 hover:text-gray-900 cursor-pointer">
-                <NavLink to="/website-templates">Website Templates</NavLink>
+                <NavLink to="/web">Website Templates</NavLink>
               </li>
               <li className="text-gray-700 hover:text-gray-900 cursor-pointer">
                 <NavLink to="/code">Code</NavLink>
@@ -143,7 +209,7 @@ function Navbar() {
                 <NavLink to="/video">Video</NavLink>
               </li>
               <li className="text-gray-700 hover:text-gray-900 cursor-pointer">
-                <NavLink to="/audio">Audio</NavLink>
+                <NavLink to="/music">Audio</NavLink>
               </li>
               <li className="text-gray-700 hover:text-gray-900 cursor-pointer">
                 <NavLink to="/graphics">Graphics</NavLink>
@@ -152,7 +218,7 @@ function Navbar() {
                 <NavLink to="/photos">Photos</NavLink>
               </li>
               <li className="text-gray-700 hover:text-gray-900 cursor-pointer">
-                <NavLink to="/3d">3D</NavLink>
+                <NavLink to="/course">course</NavLink>
               </li>
             </ul>
           </div>

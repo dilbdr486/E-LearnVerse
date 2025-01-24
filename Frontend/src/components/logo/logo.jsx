@@ -1,6 +1,13 @@
 import React from "react";
-import { FaApple, FaApplePay, FaAppStore, FaDownload, FaGooglePlay, FaLifeRing, FaMobile } from "react-icons/fa";
-
+import {
+  FaApple,
+  FaApplePay,
+  FaAppStore,
+  FaDownload,
+  FaGooglePlay,
+  FaLifeRing,
+  FaMobile,
+} from "react-icons/fa";
 
 function Logo() {
   return (
@@ -13,10 +20,14 @@ function Logo() {
             <div className="bg-white p-8 rounded-lg border border-gray-200 flex flex-col">
               <div className="flex-grow">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                  Unlimited assets for the creatively obsessed
+                  Unlock the Power of Learning Anytime, Anywhere!
                 </h3>
                 <p className="text-gray-600">
-                  Access the broadest range of asset categories in one place
+                  Discover an online learning platform designed to empower
+                  learners of all ages. With a wide array of courses spanning
+                  technology, business, arts, personal development, and more,
+                  our platform connects you with industry experts and
+                  world-class educators.
                 </p>
               </div>
             </div>
@@ -27,7 +38,7 @@ function Logo() {
                 <div className="mb-4">
                   <div className="flex items-baseline">
                     <span className="text-3xl font-bold text-gray-900">
-                      $16.50
+                      $78.50
                     </span>
                     <span className="text-gray-600 ml-2">/month</span>
                   </div>
@@ -94,9 +105,10 @@ function Logo() {
       <div>
         <section
           id="ResourceCards"
-          class="container min-h-screen  py-20 flex items-center"
+          class="container min-h-screen  py-16 flex items-center"
         >
           <div class="container mx-auto px-4" id="el-dxjyel2d">
+            <h1 className="text-3xl font-bold mb-6">Discover Creative Assets</h1>
             <div
               class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               id="el-o4mpsec7"
@@ -269,12 +281,12 @@ function Logo() {
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8" id="el-60c4ldi4">
               {/* <!-- Large Offer Card --> */}
               <div
-                class="bg-gradient-to-r from-orange-500 to-red-500 rounded-3xl p-8 text-white relative overflow-hidden"
+                class="bg-gradient-to-r bg-gray-50 to-red-500 rounded-3xl p-8  relative overflow-hidden"
                 id="el-0cbtrn4d"
               >
                 <div class="relative z-10" id="el-86hgveh3">
                   <span
-                    class="inline-block px-4 py-1 bg-white text-orange-500 rounded-full text-sm font-semibold mb-4"
+                    class="inline-block px-4 py-1 bg-white  rounded-full text-sm font-semibold mb-4"
                     id="el-o694zn67"
                   >
                     Limited Time
@@ -283,7 +295,7 @@ function Logo() {
                     Family Combo Deal
                   </h3>
                   <p class="mb-6" id="el-jcopgnkd">
-                    Get 2 large pizzas, 4 drinks, and 2 sides at 30% off
+                    Get Website Templates, courses, and codes at 30% off
                   </p>
                   <div class="flex items-center gap-4 mb-6" id="el-sgqnih1d">
                     <div class="text-4xl font-bold" id="el-1h76tjwg">
@@ -297,18 +309,12 @@ function Logo() {
                     </div>
                   </div>
                   <button
-                    class="bg-white text-orange-500 px-8 py-3 rounded-full hover:bg-opacity-90 transition duration-300 flex items-center gap-2 w-fit"
+                    class="bg-white px-8 py-3 rounded-full hover:bg-opacity-90 transition duration-300 flex items-center gap-2 w-fit"
                     id="el-2wpb1bgz"
                   >
                     Order Now
                     <i class="fa-solid fa-arrow-right" id="el-9bhhj95h"></i>
                   </button>
-                </div>
-                <div
-                  class="absolute right-0 bottom-0 opacity-10 text-9xl"
-                  id="el-pvxs0zh3"
-                >
-                  <i class="fa-solid fa-pizza-slice" id="el-0qoce4x9"></i>
                 </div>
               </div>
 
@@ -330,10 +336,10 @@ function Logo() {
                       class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center"
                       id="el-jm4n5qsd"
                     >
-                      <i
-                        class="fa-solid fa-burger text-orange-500 text-xl"
-                        id="el-t2e7tlu0"
-                      ></i>
+                      <img
+                        src="https://cdn.iconscout.com/icon/free/png-256/free-website-icon-download-in-svg-png-gif-file-formats--web-webpage-ui-miscellaneous-pack-user-interface-icons-3395056.png?f=webp&w=256"
+                        alt=""
+                      />
                     </div>
                     <span
                       class="bg-green-500 text-white px-3 py-1 rounded-full text-sm"
@@ -386,10 +392,10 @@ function Logo() {
                       class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center"
                       id="el-w0x7jizb"
                     >
-                      <i
-                        class="fa-solid fa-bowl-food text-orange-500 text-xl"
-                        id="el-87hrp5z8"
-                      ></i>
+                      <img
+                        src="https://cdn-icons-png.freepik.com/512/6681/6681138.png"
+                        alt=""
+                      />
                     </div>
                     <span
                       class="bg-blue-500 text-white px-3 py-1 rounded-full text-sm"
@@ -442,10 +448,10 @@ function Logo() {
                       class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center"
                       id="el-ajtcslpw"
                     >
-                      <i
-                        class="fa-solid fa-ice-cream text-orange-500 text-xl"
-                        id="el-z573s0ea"
-                      ></i>
+                      <img
+                        src="https://cdn-icons-png.freepik.com/256/1179/1179120.png?semt=ais_hybrid"
+                        alt=""
+                      />
                     </div>
                     <span
                       class="bg-purple-500 text-white px-3 py-1 rounded-full text-sm"
@@ -498,10 +504,10 @@ function Logo() {
                       class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center"
                       id="el-a2g71u8v"
                     >
-                      <i
-                        class="fa-solid fa-drumstick-bite text-orange-500 text-xl"
-                        id="el-4ijd9s5v"
-                      ></i>
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCFZt5erlNtY5HapVBL8Mkug2dAvdok2oYCw&s"
+                        alt=""
+                      />
                     </div>
                     <span
                       class="bg-red-500 text-white px-3 py-1 rounded-full text-sm"
@@ -700,7 +706,10 @@ function Logo() {
                     class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center"
                     id="el-0pnvqqd7"
                   >
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEHFu1IN6nxgpeOu3TpXvTXsQtx85qUBsDaw&s" alt="" />
+                    <img
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEHFu1IN6nxgpeOu3TpXvTXsQtx85qUBsDaw&s"
+                      alt=""
+                    />
                   </div>
                   <div id="el-bdtcunnz">
                     <h4 class="font-semibold text-gray-900" id="el-m0sejsii">
@@ -720,7 +729,10 @@ function Logo() {
                     class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center"
                     id="el-vt8zt9wk"
                   >
-                    
+                    <img
+                      src="https://cdn-icons-png.freepik.com/512/3458/3458714.png"
+                      alt=""
+                    />
                   </div>
                   <div id="el-6gqt97j8">
                     <h4 class="font-semibold text-gray-900" id="el-j1efqs1g">
@@ -763,7 +775,7 @@ function Logo() {
         <section id="newsletter" class="py-16 container">
           <div class="container mx-auto px-4" id="el-yarydcus">
             <div
-              class="bg-gradient-to-r from-orange-500 to-red-500 rounded-3xl p-8 md:p-12 relative overflow-hidden"
+              class="bg-gradient-to-r from-gray-500 to-blue-800 rounded-3xl p-8 md:p-12 relative overflow-hidden"
               id="el-9xvzsdn1"
             >
               {/* <!-- Background Decoration --> */}
@@ -861,7 +873,11 @@ function Logo() {
                   class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0"
                   id="el-r6vip77i"
                 >
-                  <FaMobile width={40}/>
+                  <img
+                    src="https://cdn-icons-png.freepik.com/512/100/100313.png"
+                    width={50}
+                    alt=""
+                  />
                 </div>
                 <div id="el-n3s2k73o">
                   <h3
@@ -878,14 +894,14 @@ function Logo() {
                       class="bg-black text-white px-4 py-2 rounded-lg flex items-center gap-2"
                       id="el-wi76mjhi"
                     >
-                      <FaApple/>
+                      <FaApple />
                       App Store
                     </button>
                     <button
                       class="bg-black text-white px-4 py-2 rounded-lg flex items-center gap-2"
                       id="el-u7ezjc30"
                     >
-                      <FaGooglePlay/>
+                      <FaGooglePlay />
                       Play Store
                     </button>
                   </div>
@@ -901,7 +917,10 @@ function Logo() {
                   class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0"
                   id="el-busxay96"
                 >
-                  <img src="https://img.freepik.com/premium-vector/follow-us-vector-banner-white-background-isolated-icon-following-social-media_168425-281.jpg" alt="" />
+                  <img
+                    src="https://img.freepik.com/premium-vector/follow-us-vector-banner-white-background-isolated-icon-following-social-media_168425-281.jpg"
+                    alt=""
+                  />
                 </div>
                 <div id="el-eso75g2s">
                   <h3
